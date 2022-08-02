@@ -55,6 +55,9 @@ table {
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 1200px) and (min-width: 750px) {
+    html {
+      font-size: calc(100vw/108); } }
 
 body {
   box-sizing: border-box;
