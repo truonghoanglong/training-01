@@ -1,0 +1,50 @@
+.text-items{
+    font-family: 'Montserrat', sans-serif;
+}
+.items{
+    padding: 6.5rem 0 11.65rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    @include respond(tab-port){
+        padding: 6rem 0 14rem 0;
+    }
+    @include respond(phone){
+        padding-bottom: 5rem;
+        padding-top: 4rem !important;
+    }
+    @include respond(mini-phone){
+        padding-bottom: 2rem;
+    }
+    &__img{
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        object-fit: cover;
+        @include respond(tab-port){
+            align-items: center;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+        @include respond(phone){
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+        }
+
+        &--child{
+            @include respond(1080){
+                width: (100%)/6;
+            }
+            @include respond(tab-port){
+                width: (100%)/3;
+            }
+            & a img{
+                vertical-align: top;
+                vertical-align:auto;
+            }
+        }
+    }
+}

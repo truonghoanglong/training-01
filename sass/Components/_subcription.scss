@@ -1,0 +1,159 @@
+.subscription-text{
+    font-size: 1.64rem;
+    padding: 2.4rem 21rem 6.5rem 21rem;
+    @include respond(tab-port){
+        padding: 0 ;
+        font-size: 3.2rem ;
+        font-weight: 400;
+        padding-bottom: 5rem;
+    }
+    @include respond(phone){
+        font-size: 2rem;
+        padding: 0; //
+    }
+    @include respond(420){
+        font-size: 1.6rem !important;
+    }
+    @include respond(mini-phone){
+        padding: 0;
+        font-size: 1.4rem !important;
+    }
+}
+
+.sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+
+    @include respond(desktop){
+        flex-direction: column;
+    }
+
+    @include respond(phone){
+        gap: 5.8rem !important;
+    }
+
+    @include respond(mini-phone){
+        padding:-2rem 0 !important;
+        gap: 0rem !important;
+        margin-top: -3rem;
+    }
+
+    @include respond(tab-port){
+        flex-direction: column;
+        padding: 25rem 0 26rem 0;
+        gap: 48rem;
+    }
+    @include respond(650){
+        padding: 16rem 0;
+        gap: 31rem;
+    }
+
+    @include respond(545){
+        padding: 4rem 0;
+        gap: 12rem;
+    }
+
+    @include respond(420){
+        padding: 3rem 0;
+        gap: 3rem;
+    }
+}
+
+.subscription{
+
+    @include respond(tab-port){
+        transform: scale(2.05);
+    }
+    @include respond(650){
+        transform: scale(1.6);
+    }
+    @include respond(phone){
+        transform: scale(1.07) !important;
+    }
+    &:not(:first-child){
+        @include respond(mini-phone){
+            margin-top: -5rem;
+        }
+    }
+    @include respond(mini-phone){
+        transform: scale(.85) !important; 
+    }
+    @include respond(545){
+        transform: scale(1.2);
+    }
+
+    @include respond(420){
+        transform: scale(1) ;
+    }
+    
+
+    border: .3rem solid $color-linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 14px 28px #e8e8e8, 0 10px 10px #e8e8e8;
+    cursor: pointer;
+    &__img{
+        width: 33.5rem;
+        height: 19.5rem;
+    }
+    &__title{
+        margin-top: 1.6rem;
+        font-size: 2rem;
+        font-weight: 700;
+        @include respond(tab-port){
+            margin-top: 1rem;
+        }
+    }
+    &__price{
+        font-size: 3.8rem;
+        font-weight: 600;
+        letter-spacing: 0.12rem;
+        @include respond(tab-port){
+            margin-top: -.5rem;
+        }
+    }
+    &__detail{
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        @include respond(tab-port){
+            margin-top: .5rem;
+        }
+    }
+    &__button{
+        margin: 3.6rem 0 3rem 0;
+        &--btn{
+            font-size: 1.6rem;
+            font-weight: 700;
+            color:$color-button ;
+            padding: 1.5rem 10rem;
+            border: none;
+            outline: none;
+            background-color: #eeeeee;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+    transition: all .5s;
+    &:hover{
+        transform: translateY(-1rem);
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        @include respond(mini-phone){
+            transform: translateY(-1rem);
+        }
+        @include respond(tab-port){
+            width: 100%;
+            transform: translateY(-1rem);
+        }
+        @include respond(650){
+            transform: translateY(-1rem);
+        }
+    }
+    &:hover &__button--btn{
+        background-image: linear-gradient(to right, $color-linear , $color-linear-1);
+    }
+}
